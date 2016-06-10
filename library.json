@@ -1,0 +1,16 @@
+{
+    "name": "Industrial Shields",
+    "keywords": "relay, timer",
+    "description": "Relay control library for M-duino and Ardbox from http://www.industrialshields.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dgomes/industrial-shields.git"
+    },
+    "version": "0.1",
+    "exclude": "tests",
+    "examples": "examples/*/*.ino",
+    "frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+    ]
+}
