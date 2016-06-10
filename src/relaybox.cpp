@@ -24,6 +24,8 @@ void RelayBox::setup(RELAYBOX_CALLBACK_SIGNATURE) {
 void RelayBox::switchRelay(int i, bool mode) {  //true = HIGH, false = LOW
     if(relay==NULL)
         return;
+    if(i>=relays_len)
+        return;
 
     if(mode) {
         DEBUG_PRINTLN(String("Relay(")+String(i)+String(") ... ON"));
@@ -37,6 +39,8 @@ void RelayBox::switchRelay(int i, bool mode) {  //true = HIGH, false = LOW
 
 // Turn relay ON and program relay to turn OFF in the future
 void RelayBox::switchRelay(int i, int period) {
+    if(i>=relays_len)
+        return;
     switchRelay(i,true);
     
     relay_sleep[i] = period;
