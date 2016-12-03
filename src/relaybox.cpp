@@ -15,6 +15,10 @@ RelayBox::RelayBox(Model m) {
             relay = plc_ardbox_20IO_rele;
             relays_len = sizeof(plc_ardbox_20IO_rele)/sizeof(int); 
     }
+    //Configuration Relay OUT 
+    for(uint8_t i=1; i<=relays_len; i++) {
+        pinMode(relay[i], OUTPUT);
+    }
 }
 
 void RelayBox::setup(RELAYBOX_CALLBACK_SIGNATURE) {
