@@ -42,7 +42,7 @@ void RelayBox::switchRelay(int i, bool mode) {  //true = HIGH, false = LOW
 }
 
 // Turn relay ON and program relay to turn OFF in the future
-void RelayBox::switchRelay(int i, int period) {
+void RelayBox::switchRelay(int i, unsigned long period) {
     if(i>=relays_len)
         return;
     switchRelay(i,true);

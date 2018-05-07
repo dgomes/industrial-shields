@@ -58,7 +58,7 @@ class RelayBox {
         void setup(RELAYBOX_CALLBACK_SIGNATURE); 
 
         void switchRelay(int i, bool mode); //true = HIGH, false = LOW
-        void switchRelay(int i, int period); // Program relay to turn off in the future - milliseconds
+        void switchRelay(int i, unsigned long period); // Program relay to turn off in the future - milliseconds
         void loop(); //must be called in the loop()
 };
 
